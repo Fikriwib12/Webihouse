@@ -1,0 +1,22 @@
+.p-card {
+    top: 50%; 
+    right: 10%;
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    margin-top: 300px;
+    
+  }
+
+
+
+/* style productlist */
+.load-more{
+  background-color: white !important;
+  border-color: #6D31EDFF !important;
+  color: #6D31EDFF !important;
+  margin-bottom: 50px;
+}
+
+/* end style productlist */
+  

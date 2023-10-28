@@ -1,0 +1,104 @@
+.title h1{
+font-size: 32px;
+}
+
+.item-dashboard{
+    display: flex;
+    gap: 25px;
+}
+
+.item-dashboard .item1{
+    width: 271px;
+    height: 148px;
+    background: #F5F1FEFF;
+    border-color: #D3C1FAFF;
+    border-radius: 4px;
+    border-style: solid;
+}
+
+.item-dashboard .item2{
+    width: 271px;
+    height: 148px;
+    background: #F0F9FFFF;
+    border-color: #B9E5FFFF;
+    border-radius: 4px;
+    border-style: solid;
+}
+
+.dijualCount{
+    font-size: 32px; 
+    font-weight: 600; 
+    line-height: 48px; 
+    color: #6D31EDFF;
+}
+
+.unitTerjual{
+    font-size: 16px; 
+    font-weight: 700; 
+    line-height: 26px; 
+    color: #323743FF;
+}
+
+.disewakanCount{
+    font-size: 32px; 
+    font-weight: 600; 
+    line-height: 48px; 
+    color: #15ABFFFF;
+}
+
+.unitDisewakan{
+    font-size: 16px; 
+    font-weight: 700; 
+    line-height: 26px; 
+    color: #323743FF;
+}
+
+/* Dapatkan tampilan lebih rapi dengan CSS */
+.table-container {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  th {
+    background-color: #f5f5f5; /* Warna latar belakang untuk header kolom */
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+  }
+  
+
+  
+  .action-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Atur CSS untuk kotak pencarian */
+  .search-box {
+    margin-bottom: 20px;
+  }
+  
+  /* Atur lebar kolom Action */
+  .action-col {
+    width: 120px;
+  }
+  
+  /* Atur scrollbar jika perlu */
+  .table-container::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .table-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+  }
+  
+  .table-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+  
