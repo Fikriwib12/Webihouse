@@ -87,13 +87,14 @@
                         </Swiper>
                         <div className=' p-card'>
                         <ProfileCard
-                        name={product.name}/> 
+                        name={product.name}
+                        imageAvatar={product.imageAvatar}/> 
                         </div>
                         
 
                         <div className='mt-4'>
 
-                        <h4>{product.Title}</h4>
+                        <h4>{product.status} {product.Title}</h4>
                         <h5 className='mt-4'>Harga: {product.harga}</h5>
                         <Line/>
                         <Row>
@@ -140,13 +141,19 @@
                                 </div>
                                 </Col>
                                 <Col>
-                                <div className='d-flex flex-column' style={{fontSize:'23px'}}>
+                                <div className='d-flex flex-column' style={{fontSize:'18px'}}>
                                 <i><FaBed/> : {product.fasilitas[3]}</i>
                                 <i><FaBath/> : {product.fasilitas[4]}</i>
                                
                                 </div>
                                 </Col>
                             </Row>
+
+                            <Line/>
+                            <div className='mt-4'>
+                            <h5>Lokasi Rumah</h5>
+                            <iframe src={product.gmaps} style={{width:'700px', height:'200px'}}></iframe>    
+                            </div>
                             </div>
                         </div>
                         </div>

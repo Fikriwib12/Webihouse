@@ -4,6 +4,7 @@ import NavUser from '../../components/NavUser'
 import { Container, Card, Button, Row, Col } from 'react-bootstrap'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { FiSearch } from 'react-icons/fi'
+import {GiPriceTag} from 'react-icons/gi'
 
 import FooterUser from '../../components/FooterUser'
 
@@ -87,7 +88,7 @@ function ProductList() {
                                 <Card.Body>
                                     <Card.Text style={{fontSize:'14px', color:'#6D31EDFF'}}>{item.status}</Card.Text>
                                     <Card.Title>{item.Title}</Card.Title>
-                                    <Card.Title>Harga: {item.harga} Juta</Card.Title>
+                                    <Card.Title><i><GiPriceTag/></i> {item.harga}</Card.Title>
                                     <Button variant="primary" style={{width:'330px', backgroundColor:'#6D31EDFF', borderColor:'#6D31EDFF'}} className='mt-4 mb-5' onClick={() => navigate(`/detailproduct/${item.id}`, {state: {id:item.id}})}>Detail </Button>
                                     
                                 </Card.Body>

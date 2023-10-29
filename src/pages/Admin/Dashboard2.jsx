@@ -4,7 +4,7 @@ import FooterAdmin from '../../components/FooterAdmin'
 import {BsHouseDoor, BsHouseGear} from 'react-icons/bs'
 import './admin-style.css'
 import { fetchWebihouseData } from '../../api'
-import SidebarAdmin from '../../components/SidebarAdmin'
+
 
 
 
@@ -37,7 +37,7 @@ const Dashboard2 = () => {
     <div>
         <NavAdmin/>
         
-        <SidebarAdmin/>
+        
     
 
         <div className='container my-5'>

@@ -98,6 +98,7 @@ const Webitable = () => {
                     <th>Image Detail</th>
                     <th>Status</th>
                     <th>Domisili</th>
+                    <th>Gmaps</th>
                     <th className="action-col">Action</th>
                 </tr>
             </thead>
@@ -115,7 +116,7 @@ const Webitable = () => {
                     <td>{item.Title}</td>
                     <td>{item.name}</td>
                     <td>{item.contact}</td>
-                    <td>{item.imageAvatar}</td>
+                    <td><img src={item.imageAvatar} alt="avatar" style={{maxWidth:'100px'}} /></td>
                     <td><img src={item.imageProduct} alt='rumah' style={{maxWidth:'100px'}} /></td>
                     <td>{item.description}</td>
                     <td>{item.harga}</td>
@@ -134,6 +135,7 @@ const Webitable = () => {
                     ))}</td>
                     <td>{item.status}</td>
                     <td>{item.domisili}</td>
+                    <td><iframe src={item.gmaps} frameborder="0" style={{Width:'80px', height:'80px'}}></iframe></td>
                     <td>
                     <div className='action-buttons'>
                     <button onClick={()=> handleDelete(item.id)} className='me-2'>Delete</button>

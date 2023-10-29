@@ -11,11 +11,10 @@ const ModalUpdate = ({ show, handleClose, handleUpdate, initialValues }) => {
         contact: Yup.number().required('Contact is required'),
         imageProduct: Yup.string().required('Image Product is required'),
         description: Yup.string().required('Description is required'),
-        imageDetail: Yup.array().of(Yup.string()).min(3, 'At least 3 Image Details are required').required('Image Detail is required'),
         status: Yup.string().required('Status is required'),
         domisili: Yup.string().required('Domisili is required'),
-        fasilitas: Yup.array().of(Yup.string()).min(5, 'At least 5  fasilitas are required').required('Fasilitas is required'),
-        harga: Yup.number().required('Harga is required'),
+        harga: Yup.string().required('Harga is required'),
+        gmaps: Yup.string().required('Gmaps Product is required'),
       });
     
   return (
@@ -65,12 +64,6 @@ const ModalUpdate = ({ show, handleClose, handleUpdate, initialValues }) => {
                              <Field type="text" name="imageProduct" as={BootstrapForm.Control} />
                              <ErrorMessage name="imageProduct" component="div" className="text-danger" />
                            </BootstrapForm.Group>
-
-                           <BootstrapForm.Group>
-                             <BootstrapForm.Label htmlFor="description">Description</BootstrapForm.Label>
-                             <Field type="text" name="description" as={BootstrapForm.Control} />
-                             <ErrorMessage name="description" component="div" className="text-danger" />
-                           </BootstrapForm.Group>
                            
                            <BootstrapForm.Group>
                              <BootstrapForm.Label htmlFor="imageDetail[0]">Image Detail 1</BootstrapForm.Label>
@@ -88,6 +81,12 @@ const ModalUpdate = ({ show, handleClose, handleUpdate, initialValues }) => {
                              <BootstrapForm.Label htmlFor="imageDetail[2]">Image Detail 3</BootstrapForm.Label>
                              <Field type="text" name="imageDetail[2]" as={BootstrapForm.Control} />
                              <ErrorMessage name="imageDetail[2]" component="div" className="text-danger" />
+                           </BootstrapForm.Group>
+                           
+                           <BootstrapForm.Group>
+                             <BootstrapForm.Label htmlFor="imageDetail[3]">Image Detail 4</BootstrapForm.Label>
+                             <Field type="text" name="imageDetail[3]" as={BootstrapForm.Control} />
+                             <ErrorMessage name="imageDetail[3]" component="div" className="text-danger" />
                            </BootstrapForm.Group>
                            
                            
@@ -110,7 +109,7 @@ const ModalUpdate = ({ show, handleClose, handleUpdate, initialValues }) => {
 
                          <BootstrapForm.Group>
                             <BootstrapForm.Label htmlFor='harga'>Harga</BootstrapForm.Label>
-                            <Field type='number' name='harga' className='form-control' />
+                            <Field type='text' name='harga' className='form-control' />
                             <ErrorMessage name='harga' component='div' className='text-danger' />
                           </BootstrapForm.Group>
 
@@ -127,34 +126,35 @@ const ModalUpdate = ({ show, handleClose, handleUpdate, initialValues }) => {
                           </BootstrapForm.Group>
 
                           <BootstrapForm.Group>
+                            <BootstrapForm.Label htmlFor='gmaps'>Gmaps</BootstrapForm.Label>
+                            <Field type='text' name='gmaps' className='form-control' />
+                            <ErrorMessage name='gmaps' component='div' className='text-danger' />
+                          </BootstrapForm.Group>
+
+                          <BootstrapForm.Group>
                             <BootstrapForm.Label htmlFor='fasilitas[2]'>Lantai</BootstrapForm.Label>
-                            <Field as='select' name='fasilitas[2]' className='form-select'>
-                              <option value='1 Lantai'>1 Lantai</option>
-                              <option value='2 Lantai'>2 Lantai</option>
-                              <option value='3 Lantai'>3 Lantai</option>
-                            </Field>
+                            <Field type='text' name='fasilitas[2]' className='form-control'></Field>
                             <ErrorMessage name='fasilitas' component='div' className='text-danger' />
                           </BootstrapForm.Group>
 
                           <BootstrapForm.Group>
                             <BootstrapForm.Label htmlFor='fasilitas[3]'>Kamar Tidur</BootstrapForm.Label>
-                            <Field as='select' name='fasilitas[3]' className='form-select'>
-                              <option value='1 Kamar Tidur'>1 Kamar Tidur</option>
-                              <option value='2 Kamar Tidur'>2 Kamar Tidur</option>
-                              <option value='3 Kamar Tidur'>3 Kamar Tidur</option>
+                            <Field type='text' name='fasilitas[3]' className='form-control'>
                             </Field>
                             <ErrorMessage name='fasilitas' component='div' className='text-danger' />
                           </BootstrapForm.Group>
 
                           <BootstrapForm.Group>
                             <BootstrapForm.Label htmlFor='fasilitas[4]'>Kamar Mandi</BootstrapForm.Label>
-                            <Field as='select' name='fasilitas[4]' className='form-select'>
-                              <option value='1 Kamar Mandi'>1 Kamar Mandi</option>
-                              <option value='2 Kamar Mandi'>2 Kamar Mandi</option>
-                              <option value='3 Kamar Mandi'>3 Kamar Mandi</option>
-                            </Field>
+                            <Field type='text' name='fasilitas[4]' className='form-control'></Field>
                             <ErrorMessage name='fasilitas' component='div' className='text-danger' />
                           </BootstrapForm.Group>
+
+                          <BootstrapForm.Group>
+                             <BootstrapForm.Label htmlFor="description">Description</BootstrapForm.Label>
+                             <Field as="textarea" name="description" className="form-control" />
+                             <ErrorMessage name="description" component="div" className="text-danger" />
+                           </BootstrapForm.Group>
 
 
 

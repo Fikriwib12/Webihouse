@@ -101,3 +101,12 @@ footer Button:hover{
   object-fit: cover;
   border-radius: 50%;
 }
+
+
+/* admin component style */
+
+footer-nav a{
+  text-decoration-line: none ;
+}
+
+/* end admin component style */
