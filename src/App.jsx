@@ -1,5 +1,4 @@
 import Dashboard from './pages/Admin/Dashboard'
-import Dashboard2 from './pages/Admin/Dashboard2'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Webiform from './pages/Admin/Webiform'
 import Webitable from './pages/Admin/Webitable'
@@ -21,7 +20,7 @@ function App() {
         <Route element={<Webibot/>} path='/webibot'/>
 
         
-        <Route element = {<Dashboard2/>} path='/admin/dashboard'/>
+        <Route element = {<Dashboard/>} path='/admin/dashboard'/>
         <Route element={<Webiform/>} path='/admin/form'/>
         <Route element={<Webitable/>} path='/admin/list'/>
       </Routes>
