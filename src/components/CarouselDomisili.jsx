@@ -37,6 +37,21 @@ const CarouselDomisili = () => {
       text: 'Tanggerang',
       onclick:()=> navigate('/productlist', {state: {domisili : "Tanggerang"}})
     },
+    {
+      image: 'https://hima.pwk.its.ac.id/wp-content/uploads/2022/09/tugu-kujang-di-kota-bogor-hjb-49558697.jpg',
+      text: 'Bogor',
+      onclick:()=> navigate('/productlist', {state: {domisili : "Bogor"}})
+    },
+    {
+      image: 'https://asset.kompas.com/crops/_NRrco8g6CTluqwWLyguXb4SRhg=/98x0:944x564/750x500/data/photo/2021/12/02/61a8d64decf69.jpg',
+      text: 'Depok',
+      onclick:()=> navigate('/productlist', {state: {domisili : "Depok"}})
+    },
+    {
+      image: 'https://cdn0-production-images-kly.akamaized.net/AVMnrAa_T3CD4sE4f14QN5LFZhE=/1200x1200/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/3422679/original/050633300_1617809445-kawasan_finansial_-_gedung_menara_mandiri.jpg',
+      text: 'Bekasi',
+      onclick:()=> navigate('/productlist', {state: {domisili : "Bekasi"}})
+    },
     // Tambahkan lebih banyak objek sesuai dengan jumlah gambar yang Anda inginkan
   ];
   return (

@@ -60,6 +60,8 @@ const Webitable = () => {
     }
 
     const [searchKeyword, setSearchKeyword] = useState('');
+
+    const defaultAvatar = 'https://cdn-icons-png.flaticon.com/512/6386/6386976.png';
     
 
   return (
@@ -80,6 +82,10 @@ const Webitable = () => {
           onChange={(e) => setSearchKeyword(e.target.value)}
           className='mb-3 '
         />
+        </div>
+
+        <div className='mb-4 d-flex justify-content-end'>
+            <button>+Tambah Data</button>
         </div>
 
         <div className="table-container">
@@ -135,7 +141,7 @@ const Webitable = () => {
                     ))}</td>
                     <td>{item.status}</td>
                     <td>{item.domisili}</td>
-                    <td><iframe src={item.gmaps} frameborder="0" style={{Width:'80px', height:'80px'}}></iframe></td>
+                    <td><iframe src={item.gmaps}  style={{Width:'80px', height:'80px'}}></iframe></td>
                     <td>
                     <div className='action-buttons'>
                     <button onClick={()=> handleDelete(item.id)} className='me-2'>Delete</button>

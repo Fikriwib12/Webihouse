@@ -18,10 +18,10 @@ import { useNavigate } from 'react-router-dom'
               <Nav.Link onClick={()=> navigate('/productlist', {state: {status : "Dijual"}})}>Dijual</Nav.Link>
               <Nav.Link onClick={()=> navigate('/productlist')}>Cari Rumah</Nav.Link>
               <Nav.Link onClick={()=> navigate('/webibot')}>Webibot</Nav.Link>
-              <Nav.Link onClick={()=> navigate('/webibot')}>About Us</Nav.Link>
+              
             </Nav>
             <Nav className='me-0'>
-            <Nav.Link ><Button>Titipkan Unit anda</Button></Nav.Link>
+            <Nav.Link href='https://api.whatsapp.com/send?phone=6289620290020&text=hallo%20kak' target='blank' ><Button>Titipkan Unit anda</Button></Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

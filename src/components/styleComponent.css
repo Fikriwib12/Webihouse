@@ -105,8 +105,10 @@ footer Button:hover{
 
 /* admin component style */
 
-footer-nav a{
+.footer-nav a{
   text-decoration-line: none ;
+  color: black;
+  
 }
 
 /* end admin component style */

@@ -65,14 +65,14 @@ function ProductList() {
             <div className="d-flex justify-content-center my-3">
             <div className="input-group">
             <span className="input-group-text">
-              <FiSearch /> {/* Menambahkan ikon pencarian */}
+              <FiSearch /> 
             </span>
             <input
               type="text"
-              placeholder="Search"
+              placeholder="Cari Rumah..."
               value={searchKeyword}
               onChange={(e) => setSearchKeyword(e.target.value)}
-              className="form-control" // Tidak perlu mx-auto lagi
+              className="form-control" 
             />
             </div>
             </div>
@@ -82,11 +82,11 @@ function ProductList() {
 
                 <Row>
                     {filteredData.slice(0, itemsToShow).map((item) => (
-                        <Col key={item.id} md={4} style={{ marginBottom: '20px' }}>
+                        <Col key={item.id} md={4} style={{ marginBottom: '20px' }} onClick={() => navigate(`/detailproduct/${item.id}`, {state: {id:item.id}})}>
                             <Card style={{ width: '23rem' }}>
                                 <Card.Img variant="top" src={item.imageProduct} style={{ height: '400px', objectFit: 'cover' }} />
                                 <Card.Body>
-                                    <Card.Text style={{fontSize:'14px', color:'#6D31EDFF'}}>{item.status}</Card.Text>
+                                    <Card.Text style={{fontSize:'14px', color:'#6D31EDFF', fontWeight:'bold'}}>{item.status}</Card.Text>
                                     <Card.Title>{item.Title}</Card.Title>
                                     <Card.Title><i><GiPriceTag/></i> {item.harga}</Card.Title>
                                     <Button variant="primary" style={{width:'330px', backgroundColor:'#6D31EDFF', borderColor:'#6D31EDFF'}} className='mt-4 mb-5' onClick={() => navigate(`/detailproduct/${item.id}`, {state: {id:item.id}})}>Detail </Button>

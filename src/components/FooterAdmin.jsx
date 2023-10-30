@@ -7,7 +7,7 @@ const FooterAdmin = () => {
   return (
     <div>
 
-        <footer style={{backgroundColor:'#FAFAFBFF'}} className='p-4 mt-5'>
+        <footer style={{backgroundColor:'#FAFAFBFF'}} className='p-4 '>
       <Container>
           <Row>
             <Col md={3}>
@@ -15,7 +15,7 @@ const FooterAdmin = () => {
             </Col>
            <Col md={3}>
            <h3>Menu</h3>
-           <div className='footer-nav d-flex flex-column' >
+           <div className='footer-nav d-flex flex-column gap-2' >
            <a href="" >Dashboard</a>
            <a href="">Form</a>
            <a href="">Unit List</a>

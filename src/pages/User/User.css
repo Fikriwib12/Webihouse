@@ -8,7 +8,15 @@
     
   }
 
+/* style homepage */
+.card-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  max-width: 100%; /* Sesuaikan sesuai kebutuhan Anda */
+}
 
+/* end style homepage */
 
 /* style productlist */
 .load-more{

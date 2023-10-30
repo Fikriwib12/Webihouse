@@ -6,6 +6,7 @@ import HeroImg from '../../components/hero.jpg';
 import { Container, Card, Button, Row, Col } from 'react-bootstrap'
 import { fetchWebihouseData } from '../../api';
 import CarouselDomisili from '../../components/CarouselDomisili';
+import './User.css'
 
 
 const Home = () => {
@@ -63,7 +64,7 @@ const Home = () => {
                 <Card.Text style={{fontSize:"13px", color:"#9095A1FF" }}>
                   {item.status}
                 </Card.Text>
-                <Card.Title>
+                <Card.Title className='card-title'>
                   {item.Title}
                 </Card.Title>
                 <Card.Text className='mt-3'>

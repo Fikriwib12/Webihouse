@@ -8,6 +8,7 @@ import { fetchWebihouseData } from '../../api'
 
 
 
+
 const Dashboard = () => {
     const [webihouseData, setWebihouseData] = useState([])
     const [disewakanCount, setDisewakanCount] = useState(0)
@@ -39,7 +40,9 @@ const Dashboard = () => {
         
         
     
-
+        
+          
+        
         <div className='container my-5'>
         <div className='title'>
             <p>Admin/Dashboard</p>
@@ -80,6 +83,7 @@ const Dashboard = () => {
         </div>
         
         </div>
+        
 
         <FooterAdmin/>
     </div>

@@ -3,7 +3,10 @@ import './styleComponent.css'
 import { Button } from 'react-bootstrap';
 import { BsTelephoneInbound } from 'react-icons/bs';
 
-const ProfileCard = ({name, imageAvatar}) => {
+const ProfileCard = ({name, imageAvatar, contact}) => {
+
+  const defaultAvatar = 'https://cdn-icons-png.flaticon.com/512/266/266033.png'
+
   return (
     <div className="profile-card">
     <div className="profile-card-top">
@@ -12,7 +15,7 @@ const ProfileCard = ({name, imageAvatar}) => {
 
     <div className="avatar ">
       <div className="avatar-image">
-        <img src={imageAvatar} alt="a" />
+         <img src={imageAvatar || defaultAvatar} alt="a" />
       </div>
     </div>
     <div className='profile-card-txt mt-3 text-center'>
@@ -21,7 +24,7 @@ const ProfileCard = ({name, imageAvatar}) => {
     </div>
     <div className='d-flex mt-3 '>
       <Button >
-        <BsTelephoneInbound/> 081317987889
+        <BsTelephoneInbound/> {contact}
       </Button>
     </div>
       </div>

@@ -43,7 +43,7 @@ const FooterUser = () => {
             <Col>
             <h6 style={{fontSize:'14px', color:'#6D31EDFF', fontWeight:'bold'}}>Susah untuk menjual dan menyewakan rumah anda</h6>
             <p style={{fontSize:'13px'}} className='mt-3'>Tenang Kami Punya solusinya</p>
-            <Button>Titipkan Unit anda</Button>
+            <a href='https://api.whatsapp.com/send?phone=6289620290020&text=hallo%20kak' target='blank'><Button >Titipkan Unit anda</Button></a>
             </Col>
           </Row>
       </Container>

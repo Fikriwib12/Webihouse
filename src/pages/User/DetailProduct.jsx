@@ -34,6 +34,8 @@
             setShowFullDescription(!showFullDescription);
         };
 
+        const defaultImg = 'https://t3.ftcdn.net/jpg/01/91/95/30/360_F_191953033_gehQATeDoh5z6PyRDbeKyBZuS83CjMEF.jpg'
+
         return (
             <div>
                 <NavUser/>
@@ -58,43 +60,52 @@
                             </SwiperSlide>
                             <SwiperSlide>
                                 <img
-                                    src={product.imageDetail[0]}
+                                    src={product.imageDetail[0] || defaultImg}
                                     alt=""
                                     style={{ width: '500px', height: '400px', objectFit:'cover' }}
                                 />
                             </SwiperSlide>
                             <SwiperSlide>
                                 <img
-                                    src={product.imageDetail[1]}
+                                    src={product.imageDetail[1] || defaultImg}
                                     alt=""
                                     style={{ width: '500px', height: '400px' ,objectFit:'cover' }}
                                 />
                             </SwiperSlide>
                             <SwiperSlide>
                                 <img
-                                    src={product.imageDetail[2]}
+                                    src={product.imageDetail[2] || defaultImg}
                                     alt=""
                                     style={{ width: '500px', height: '400px', objectFit:'cover' }}
                                 />
                             </SwiperSlide>
                             <SwiperSlide>
                                 <img
-                                    src={product.imageDetail[3]}
+                                    src={product.imageDetail[3] || defaultImg}
                                     alt=""
                                     style={{ width: '500px', height: '400px', objectFit:'cover' }}
+                                />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <img
+                                    src="https://t3.ftcdn.net/jpg/01/91/95/30/360_F_191953033_gehQATeDoh5z6PyRDbeKyBZuS83CjMEF.jpg"
+                                    alt=""
+                                    style={{ width: '500px', height: '400px', objectFit:'cover'}}
                                 />
                             </SwiperSlide>
                         </Swiper>
                         <div className=' p-card'>
                         <ProfileCard
                         name={product.name}
-                        imageAvatar={product.imageAvatar}/> 
+                        imageAvatar={product.imageAvatar}
+                        contact={product.contact}/> 
                         </div>
                         
 
                         <div className='mt-4'>
 
                         <h4>{product.status} {product.Title}</h4>
+                        <h6 className='mt-3' style={{color:'grey'}}>Domisili: {product.domisili}</h6>
                         <h5 className='mt-4'>Harga: {product.harga}</h5>
                         <Line/>
                         <Row>
@@ -103,12 +114,12 @@
                         <div className='deskripsi' style={{width:'500px'}}>
 
                         <h6 className='mt-4'>Deskripsi</h6>
-                        <p className='mt-2'>
+                        <pre className='mt-2'>
                             {showFullDescription
                                 ? product.description
                                 : product.description.substring(0, 100) 
                                 }
-                        </p>
+                        </pre>
                             {!showFullDescription && (
                                 <button onClick={toggleDescription} className='btn btn-link' style={{fontSize:'15px'}}>
                                     Show More
@@ -135,8 +146,8 @@
                             <Row>
                                 <Col md={3}>
                                 <div style={{fontSize:'18px'}}>
-                                <p>LT : {product.fasilitas[0]}</p>
-                                <p>LB : {product.fasilitas[1]}</p>
+                                <p>LT : {product.fasilitas[0]} m<sup>2</sup></p>
+                                <p>LB : {product.fasilitas[1]} m<sup>2</sup></p>
                                 <i><FaStairs/> : {product.fasilitas[2]}</i>
                                 </div>
                                 </Col>
@@ -147,6 +158,7 @@
                                
                                 </div>
                                 </Col>
+                                <p className='mt-4'>*Jika ingin mengetahui fasilitas lebih detail silahkan hubungi contact pemilik</p>
                             </Row>
 
                             <Line/>
