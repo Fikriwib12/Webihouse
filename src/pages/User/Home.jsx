@@ -27,7 +27,7 @@ const Home = () => {
     <div>
         <NavUser/>
 
-        <button onClick={() => navigate('/admin/dashboard')}>go to admin</button>
+        
 
         {/* hero card */}
         <Card>
