@@ -6,15 +6,15 @@ import * as Yup from 'yup'
 const ModalUpdate = ({ show, handleClose, handleUpdate, initialValues }) => {
 
     const validationSchema = Yup.object().shape({
-        Title: Yup.string().required('Title is required'),
-        name: Yup.string().required('Name is required'),
-        contact: Yup.number().required('Contact is required'),
-        imageProduct: Yup.string().required('Image Product is required'),
-        description: Yup.string().required('Description is required'),
-        status: Yup.string().required('Status is required'),
-        domisili: Yup.string().required('Domisili is required'),
-        harga: Yup.string().required('Harga is required'),
-        gmaps: Yup.string().required('Gmaps Product is required'),
+      Title: Yup.string().required('Title is required'),
+      name: Yup.string().required('Name is required'),
+      contact: Yup.number().required('Contact is required'),
+      harga: Yup.string().required('Harga is required'),
+      imageProduct: Yup.string().required('Image Product is required'),
+      description: Yup.string().required('Description is required'), 
+      status: Yup.string().required('Status is required'),
+      domisili: Yup.string().required('Domisili is required'),
+        
       });
     
   return (
@@ -103,9 +103,24 @@ const ModalUpdate = ({ show, handleClose, handleUpdate, initialValues }) => {
                           
                           <BootstrapForm.Group>
                             <BootstrapForm.Label htmlFor='domisili'>Domisili</BootstrapForm.Label>
-                            <Field type='text' name='domisili'as={BootstrapForm.Control} />
-                            <ErrorMessage name='domisili' component='div' className='text-danger' />
-                         </BootstrapForm.Group>
+                            <Field
+                            type='text'
+                            name='domisili'
+                            list='domisiliList' 
+                            className='form-control'
+                            />
+                            <datalist id='domisiliList'> 
+                              <option value='Jakarta Utara' />
+                              <option value='Jakarta Selatan' />
+                              <option value='Jakarta Barat' />
+                              <option value='Jakarta Timur' />
+                              <option value='Jakarta Pusat' />
+                              <option value='Tanggerang' />
+                              <option value='Bogor' />
+                              <option value='Depok' />
+                              <option value='Bekasi' />
+                            </datalist>
+                          </BootstrapForm.Group>
 
                          <BootstrapForm.Group>
                             <BootstrapForm.Label htmlFor='harga'>Harga</BootstrapForm.Label>

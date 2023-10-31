@@ -27,10 +27,10 @@ const Webibot = () => {
       if (prompt.toLowerCase().includes('bagaimana cara menjual rumah')) {
         setResult(
           "Untuk menjual rumah di WebiHouse, Anda dapat mengikuti langkah-langkah berikut:\n" +
-          "1. Pergi ke menu 'Home' di aplikasi WebiHouse.\n" +
+          "1. Pergi ke menu 'Home' di Website WebiHouse.\n" +
           "2. Klik tombol 'Titipkan Unit Anda' untuk memasarkan rumah Anda.\n" +
           "3. Anda akan langsung diarahkan ke WhatsApp tim WebiHouse untuk memberikan data dan memulai proses pemasaran rumah Anda."
-        );
+        )
       } else {
         const response = await openai.createCompletion({
           model: 'text-davinci-003',

@@ -5,6 +5,8 @@ import { ErrorMessage, Field, Formik, Form } from 'formik'
 import { Button, Col, Container, Form as BootstrapForm, Row, Alert } from 'react-bootstrap'
 import * as Yup from 'yup'
 import FooterAdmin from '../../components/FooterAdmin'
+import Swal from 'sweetalert2';
+
 
 const Webiform = () => {
   const validationSchema = Yup.object().shape({
@@ -13,13 +15,9 @@ const Webiform = () => {
     contact: Yup.number().required('Contact is required'),
     harga: Yup.string().required('Harga is required'),
     imageProduct: Yup.string().required('Image Product is required'),
-    description: Yup.string().required('Description is required'),
-    
+    description: Yup.string().required('Description is required'), 
     status: Yup.string().required('Status is required'),
     domisili: Yup.string().required('Domisili is required'),
-    imageAvatar: Yup.string().required('Image Avatar is required'),
-    
-    gmaps: Yup.string().required('Gmaps is required')
     
   });
 
@@ -34,7 +32,7 @@ const Webiform = () => {
     status: 'Dijual', // Set a default value
     domisili: '',
     imageAvatar:'',
-    fasilitas: ['', '', '1 Lantai', '1 Kamar Tidur', '1 Kamar Mandi'],
+    fasilitas: ['100', '80', '1 Lantai', '1 Kamar Tidur', '1 Kamar Mandi'],
     gmaps:'',
   };
 
@@ -42,7 +40,11 @@ const Webiform = () => {
     postWebihouseData(values)
       .then(() => {
         resetForm();
-        alert('succes')
+        Swal.fire({
+          icon: 'success',
+          title: 'Success!',
+          text: 'Data has been submitted successfully.',
+        });
       })
       .catch((error) => console.error(error));
   };
@@ -146,11 +148,27 @@ const Webiform = () => {
                   </BootstrapForm.Group>
                 </Col>
                 <Col md={4}>
-                  <BootstrapForm.Group>
-                    <BootstrapForm.Label htmlFor='domisili'>Domisili</BootstrapForm.Label>
-                    <Field type='text' name='domisili' className='form-control' />
-                    <ErrorMessage name='domisili' component='div' className='text-danger' />
-                  </BootstrapForm.Group>
+                <BootstrapForm.Group>
+                  <BootstrapForm.Label htmlFor='domisili'>Domisili</BootstrapForm.Label>
+                  <Field
+                  type='text'
+                  name='domisili'
+                  list='domisiliList' 
+                  className='form-control'
+                  />
+                  <datalist id='domisiliList'> 
+                    <option value='Jakarta Utara' />
+                    <option value='Jakarta Selatan' />
+                    <option value='Jakarta Barat' />
+                    <option value='Jakarta Timur' />
+                    <option value='Jakarta Pusat' />
+                    <option value='Tanggerang' />
+                    <option value='Bogor' />
+                    <option value='Depok' />
+                    <option value='Bekasi' />
+                  </datalist>
+                  <ErrorMessage name='domisili' component='div' className='text-danger' />
+                </BootstrapForm.Group>
                 </Col>
                 <Col md={4}>
                   <BootstrapForm.Group>

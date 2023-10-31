@@ -41,18 +41,7 @@ export const updateWebihouseData = async (id, data) => {
     }
 }
 
-// export const countDisewakanData = async () => {
-//     try {
-//       const response = await axios.get(API_URL);
-//       const data = response.data;
-  
-//       // Filter dan hitung data dengan status "Disewakan"
-//       const disewakanCount = data.filter((item) => item.status === 'Disewakan').length;
-//       return disewakanCount;
-//     } catch (error) {
-//       throw error;
-//     }
-//   };
+
   
   export const fetchProductById = async (id) => {
     try {

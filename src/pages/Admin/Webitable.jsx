@@ -5,8 +5,11 @@ import './admin-style.css'
 import { Table } from 'react-bootstrap'
 import { deleteWebihouseData, fetchWebihouseData, updateWebihouseData } from '../../api'
 import FooterAdmin from '../../components/FooterAdmin'
+import { useNavigate } from 'react-router-dom'
+import Swal from 'sweetalert2';
 
 const Webitable = () => {
+    const navigate = useNavigate()
     const [webihouseData, setWebihouseData] = useState([])
 
     useEffect(() =>{
@@ -16,17 +19,30 @@ const Webitable = () => {
     }, [])
 
     const handleDelete = (id) => {
-        if(window.confirm('Apakah anda yakin Menghapus Item ini?')){
+        Swal.fire({
+          title: 'Apakah anda yakin?',
+          text: 'Anda tidak akan dapat mengembalikan ini!',
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonText: 'Ya, hapus!',
+          cancelButtonText: 'Batal',
+        }).then((result) => {
+          if (result.isConfirmed) {
             deleteWebihouseData(id)
-            .then(()=>{
-                setWebihouseData((prevData)=> prevData.filter((item)=> item.id !== id))
-            })
-            .catch((error)=> console.error(error))
-        }
-    }
+              .then(() => {
+                setWebihouseData((prevData) => prevData.filter((item) => item.id !== id));
+                Swal.fire('Deleted!', 'Data has been deleted.', 'success');
+              })
+              .catch((error) => {
+                console.error(error);
+                Swal.fire('Error!', 'An error occurred while deleting the data.', 'error');
+              });
+          }
+        });
+      };
 
 
-    //Ini untuk Menampilkan modal Update
+    // Menampilkan modal Update
     const [showUpdateModal, setShowUpdateModal] = useState(false)
     const [selectedItem, setSelectedItem] = useState(null)
 
@@ -61,7 +77,7 @@ const Webitable = () => {
 
     const [searchKeyword, setSearchKeyword] = useState('');
 
-    const defaultAvatar = 'https://cdn-icons-png.flaticon.com/512/6386/6386976.png';
+    
     
 
   return (
@@ -85,7 +101,7 @@ const Webitable = () => {
         </div>
 
         <div className='mb-4 d-flex justify-content-end'>
-            <button>+Tambah Data</button>
+            <button onClick={()=> navigate('/admin/form')}>+Tambah Data</button>
         </div>
 
         <div className="table-container">
