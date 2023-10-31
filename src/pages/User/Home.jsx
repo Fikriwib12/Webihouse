@@ -27,6 +27,8 @@ const Home = () => {
     <div>
         <NavUser/>
 
+        <button onClick={() => navigate('/admin/dashboard')}>go to admin</button>
+
         {/* hero card */}
         <Card>
         <Card.Img src={HeroImg} alt="cardimg" style={{ height: '232px', objectFit: 'cover', filter: 'blur(2px)' }} />
