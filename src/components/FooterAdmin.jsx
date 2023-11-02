@@ -2,8 +2,12 @@ import React from 'react'
 import { Col, Container, Row, Button } from 'react-bootstrap'
 import Logo from '../assets/Logo_webihouse.png'
 import './styleComponent.css'
+import { useNavigate } from 'react-router-dom'
 
 const FooterAdmin = () => {
+
+  const navigate = useNavigate()
+
   return (
     <div>
 
@@ -16,9 +20,9 @@ const FooterAdmin = () => {
            <Col md={3}>
            <h3>Menu</h3>
            <div className='footer-nav d-flex flex-column gap-2' >
-           <a href="" >Dashboard</a>
-           <a href="">Form</a>
-           <a href="">Unit List</a>
+           <a href="" onClick={() => navigate('/admin/dashboard') } >Dashboard</a>
+           <a href="" onClick={() => navigate('/admin/form') }>Form</a>
+           <a href="" onClick={() => navigate('/admin/list') }>Unit List</a>
            </div>
            </Col>
           </Row>
