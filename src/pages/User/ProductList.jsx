@@ -86,7 +86,7 @@ function ProductList() {
                             <Card style={{ width: '23rem' }}>
                                 <Card.Img variant="top" src={item.imageProduct} style={{ height: '400px', objectFit: 'cover' }} />
                                 <Card.Body>
-                                    <Card.Text style={{fontSize:'14px', color:'#6D31EDFF', fontWeight:'bold'}}>{item.status}</Card.Text>
+                                    <Card.Text style={{fontSize:'14px', color:'#9095A1FF', fontWeight:'bold'}}>{item.status}</Card.Text>
                                     <Card.Title>{item.Title}</Card.Title>
                                     <Card.Title><i><GiPriceTag/></i> {item.harga}</Card.Title>
                                     <Button variant="primary" style={{width:'330px', backgroundColor:'#6D31EDFF', borderColor:'#6D31EDFF'}} className='mt-4 mb-5' onClick={() => navigate(`/detailproduct/${item.id}`, {state: {id:item.id}})}>Detail </Button>

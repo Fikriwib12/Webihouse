@@ -63,7 +63,7 @@ const Home = () => {
               <Card.Img
               variant="top" src={item.imageProduct} style={{ height: '376px', objectFit: 'cover' }}/>
               <Card.Body>
-                <Card.Text style={{fontSize:"13px", color:"#9095A1FF" }}>
+                <Card.Text style={{fontSize:"13px", fontWeight:'bold', color:"#9095A1FF" }}>
                   {item.status}
                 </Card.Text>
                 <Card.Title className='card-title'>

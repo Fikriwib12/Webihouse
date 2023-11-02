@@ -52,7 +52,7 @@ const CarouselDomisili = () => {
       text: 'Bekasi',
       onclick:()=> navigate('/productlist', {state: {domisili : "Bekasi"}})
     },
-    // Tambahkan lebih banyak objek sesuai dengan jumlah gambar yang Anda inginkan
+    
   ];
   return (
     <div>
